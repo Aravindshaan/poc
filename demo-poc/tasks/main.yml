@@ -1,0 +1,10 @@
+---
+# tasks file for demo-poc
+- nmae: copy jar file
+  ansible.builtin.copy:
+    src: /var/lib/jenkins/workspace/demo-poc-pipeline/build/libs/
+    dest: /opt/demo.jar
+
+- name: starting the spring service
+  shell: systemctl start demo.service
+
