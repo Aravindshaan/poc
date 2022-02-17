@@ -3,7 +3,7 @@
 - name: copy jar file
   ansible.builtin.copy:
     src: /var/lib/jenkins/workspace/demo-poc-pipeline/build/libs/
-    dest: /opt/demo.jar
+    dest: /opt
 
 - name: starting the spring service
   shell: systemctl start demo.service
