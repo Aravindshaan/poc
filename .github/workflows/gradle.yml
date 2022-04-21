@@ -35,7 +35,8 @@ jobs:
     - name: push image to docker hub
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-        image: shaan/gradle_demo
+        image: shaan168/shaan
+        tags: gradle_demo
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}    
