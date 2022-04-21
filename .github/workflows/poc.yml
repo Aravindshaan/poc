@@ -31,4 +31,5 @@ jobs:
     - name: Grant execute permissions
       run: chmod +x gradle
     - name: build with gradle
-      run: ./gradle build
+      run: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
+      
