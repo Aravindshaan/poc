@@ -1,0 +1,16 @@
+name: Reusable workflow
+on: 
+  workflow-call:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: push image to docker hub
+      uses: mr-smithers-excellent/docker-build-push@v5
+      with:
+        image: shaan168/aravind
+        tags: gradle_demo
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
