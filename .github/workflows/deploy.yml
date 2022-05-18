@@ -1,6 +1,14 @@
 name: Reusable workflow
 on: 
-  workflow-call:
+  workflow_call:
+    inputs:
+      username:
+        required: true
+        type: string
+    secrets:
+      password:
+        required: true
+      
 jobs:
   deploy:
     runs-on: ubuntu-latest
