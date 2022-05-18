@@ -34,4 +34,6 @@ jobs:
       run: ./gradlew build
   call-workflow:
     uses: Aravindshaan/poc/.github/workflows/deploy.yml@master
+    with:
+      username: Aravindshaan
   
